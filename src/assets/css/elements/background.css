@@ -1,0 +1,35 @@
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    scroll-behavior: smooth;
+    font-family: 'Roboto', sans-serif;
+    background: url('../../imgs/bg.png') repeat;
+    z-index: -1;
+}
+
+
+
+/* #region Stars (Parallax) */
+.stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+}
+
+.big-stars {
+    background: url('../../imgs/Stars-Big_1.png') repeat;
+    background-size: contain;
+    z-index: 10;
+}
+
+.small-stars {
+    background: url('../../imgs/Stars_Small_1.png') repeat;
+    background-size: contain;
+    z-index: 10;
+}

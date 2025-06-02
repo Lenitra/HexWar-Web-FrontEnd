@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+
+
+
+/* #region Variables */
+:root {
+  scroll-behavior: smooth;
+  --light-bg: rgba(255, 255, 255, 0.3);
+  --text-color: #333;
+  --light-diff: 10%;
+  --main-bg-color-h: 0;
+  --main-bg-color-s: 0%;
+  --main-bg-color-l: 100%;
+  --primary-color-h: 0;
+  --primary-color-s: 0%;
+  --primary-color-l: 100%;
+  --primary-color: hsl(var(--primary-color-h), var(--primary-color-s), var(--primary-color-l));
+  --primary-color-hover: hsl(var(--primary-color-h), var(--primary-color-s), calc(var(--primary-color-l) + var(--light-diff)));
+}
+
+/* #endregion Variables */
+
+/* #region Fonts */
+@font-face {
+  font-family: font1;
+  /*src: url("../fonts/Broxy.otf");*/
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: font2;
+  src: url("../fonts/ALIEN_CYBERNETICS.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: font3;
+  src: url("../fonts/CODE_Bold.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+/* flash-messages.css */
+
+/* Conteneur des flash messages */
+.flash-messages {
+  position: fixed;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 90%;
+  max-width: 600px;
+}
+
+/* Style de base pour chaque flash message */
+.flash-message {
+  padding: 15px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #fff;
+  opacity: 0.95;
+  transition: opacity 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Différents types de flash messages */
+.flash-message.success {
+  background-color: #28a745;
+}
+
+.flash-message.error {
+  background-color: #dc3545;
+}
+
+.flash-message.warning {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.flash-message.info {
+  background-color: #17a2b8;
+}
+
+/* Optionnel : effet au survol */
+.flash-message:hover {
+  opacity: 1;
+}
