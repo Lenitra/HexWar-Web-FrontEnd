@@ -39,7 +39,7 @@
 
 <script lang="ts" setup>
 import { userAppStore } from "@/assets/js/storage";
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 
 const menuActive = ref(false);
 
@@ -47,13 +47,18 @@ const toggleMenu = () => {
     menuActive.value = !menuActive.value;
 };
 
-const isConnected = ref(userStore.isConnected);
-import { onMounted } from 'vue';
+
+const playerPrefs = userAppStore();
+playerPrefs.setColor(undefined, undefined, undefined);
+
+
+const isConnected = playerPrefs.isConnected;
+
 onMounted(() => {
-    isConnected.value = userStore.isConnected;
+    // Ensure the menu is closed on mount
+    menuActive.value = false;
 });
-const userAppStore = userAppStore();
-userAppStore.setColor(undefined, undefined, undefined);
+
 
 
 
