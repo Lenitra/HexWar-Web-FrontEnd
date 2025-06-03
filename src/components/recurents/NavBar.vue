@@ -38,7 +38,7 @@
 </template>
 
 <script lang="ts" setup>
-import { useUserStore } from "@/stores/userStore";
+import { userAppStore } from "@/assets/js/storage";
 import { ref } from 'vue';
 
 const menuActive = ref(false);
@@ -46,6 +46,14 @@ const menuActive = ref(false);
 const toggleMenu = () => {
     menuActive.value = !menuActive.value;
 };
+
+const isConnected = ref(userStore.isConnected);
+import { onMounted } from 'vue';
+onMounted(() => {
+    isConnected.value = userStore.isConnected;
+});
+const userAppStore = userAppStore();
+userAppStore.setColor(undefined, undefined, undefined);
 
 
 

@@ -2,12 +2,12 @@
 import HomePage from "@/pages/HomePage.vue";
 
 
-import { useAppStore } from "@/assets/js/storage";
 import { onMounted } from "vue";
+import { userAppStore } from "@/assets/js/storage";
 
-const appStore = useAppStore();
+const appStore = userAppStore();
 onMounted(() => {
-    useAppStore().setColor(undefined, undefined, undefined, );
+    userAppStore().setColor(undefined, undefined, undefined, );
 });
 
 
