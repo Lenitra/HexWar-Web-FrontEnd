@@ -2,7 +2,7 @@
 import HomePage from "@/pages/HomePage.vue";
 
 
-import { useAppStore } from "@/assets/js/storage.ts";
+import { useAppStore } from "@/assets/js/storage";
 import { onMounted } from "vue";
 
 const appStore = useAppStore();
