@@ -38,6 +38,7 @@
 </template>
 
 <script lang="ts" setup>
+import { useUserStore } from "@/stores/userStore";
 import { ref } from 'vue';
 
 const menuActive = ref(false);
@@ -46,7 +47,6 @@ const toggleMenu = () => {
     menuActive.value = !menuActive.value;
 };
 
-const isConnected = ref(false);
 
 
 </script>

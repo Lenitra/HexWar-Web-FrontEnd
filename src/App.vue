@@ -1,5 +1,19 @@
 <script setup lang="ts">
-import HomePage from "@/Pages/HomePage.vue";
+import HomePage from "@/pages/HomePage.vue";
+
+
+import { useAppStore } from "@/assets/js/storage.ts";
+import { onMounted } from "vue";
+
+const appStore = useAppStore();
+onMounted(() => {
+    useAppStore().setColor(undefined, undefined, undefined, );
+});
+
+
+
+
+
 </script>
 
 <template>
